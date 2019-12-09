@@ -1226,7 +1226,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #b5af77;
+  background: #a7fff9;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2690,7 +2690,7 @@ body {
 }
 @media (min-width: 992px) {
   .site-meta {
-    background-image: url("/images/1.jpg");
+    background-image: url("/images/bg-7.jpg");
   }
 }
 .post-block {
