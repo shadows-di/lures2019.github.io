@@ -3,7 +3,8 @@
   <entry>
     <title>关于本博客和自己的一些介绍</title>
     <url>/2019/12/10/about/</url>
-    <content><![CDATA[<!DOCTYPE html>
+    <content><![CDATA[<a id="more"></a>
+<p>概述：<br>这是俺的博客创建的初衷以及俺的一些介绍！<br><!DOCTYPE html></p>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -37,7 +38,7 @@
             <li>第二次是在2019年的12月份，时隔3个月，我又开始搭建了新的博客，是处于下面的原因：</li>
             <ol type="1">
                 <li>事情的起因是我在知乎上写的一篇文章审核不通过，在知乎上写的一篇文章被举报了！</li>
-                <img src="/2019/12/10/about/image/about知乎举报.png" width="400px" height="300px">
+                <img src="/2019/12/10/about/image/about知乎举报.jpg" width="400px" height="300px">
                 <br>
                 <li>CSDN上审核不成功的照片我就不再显示了，你只需要知道当时真的crazy！</li>
                 <li>加上自己正在和几个伙伴一起运营公众号"空谷小莜蓝"，所以想着也需要自己一个"官方"的博客，于是这个博客就这么诞生了！！！</li>
