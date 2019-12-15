@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>黑客自学之路</title>
+    <url>/2019/12/14/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/</url>
+    <content><![CDATA[<h1 id="黑客入门学习路线"><a href="#黑客入门学习路线" class="headerlink" title="黑客入门学习路线"></a>黑客入门学习路线</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>感谢博文：<a href="https://blog.csdn.net/csdnsevenn/article/details/78968661" target="_blank" rel="noopener">https://blog.csdn.net/csdnsevenn/article/details/78968661</a><br>我终于知道该如何入门黑客了，之前一直在门前徘徊不知道到底如何去学习，当一名光荣的黑客，保护着我要保护的人，今天我终于知道了自己<br>要干什么，应该干什么，要怎么干，千言万语都在一声”谢谢”中，本篇博客仅仅用来记录我的学习规划，虽然博文中的链接已经失效，作者也没有<br>刻意的加上新的链接，但是那都不是事，有的方向还怕路上没有花花草草吗？</p>
+<a id="more"></a>
+
+<h3 id="第一部分："><a href="#第一部分：" class="headerlink" title="第一部分："></a>第一部分：</h3><p>首先，学习传智的前端课程，简单的入门Web，如下图：</p>
+<p><img src="/2019/12/14/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5.png" alt="第一阶段"></p>
+<p>学完这个之后，在各大漏洞平台或SRC(各大互联网产商的安全部门，负责审核你挖掘的漏洞并提供奖励)平台找一些目标来实际的挖洞一下，挖洞是一定要学会前期的信息收集(踩点)</p>
+<h3 id="第二部分："><a href="#第二部分：" class="headerlink" title="第二部分："></a>第二部分：</h3><p>①百度学习2003,2008的操作系统，需要使用以上操作系统使用网上的已有的CMS(如:discuz,WordPress,phpcms,dedecms等) 搭建一个站点，从在服务器上安装和配置php+apache+mysql等环境开始，不要使用集成工具偷懒，去体会一下网站的搭建过程，知道什么是ftp，什么是空间，在网上买的虚拟主机和服务器，vps是个什么区别？什么是CMS目标站点？</p>
+<p>②接下来是一部门Linux的知识学习了，在线课程：</p>
+<p><a href="http://study.163.com/course/courseMain.htm?courseId=983014" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=983014</a> </p>
+<p>②学习一门方便我们写exploit利用工具的编程工具，首选是Python：</p>
+<p><img src="/2019/12/14/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86.png" alt="第三部分"></p>
+<h3 id="第三部分："><a href="#第三部分：" class="headerlink" title="第三部分："></a>第三部分：</h3><p>①教主的TCP/IP教程：</p>
+<p><img src="/2019/12/14/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E6%95%99%E4%B8%BBTCP.png" alt="教主TCP"><br>②传智的Java教程(着重看Oracle数据库教程)：</p>
+<p><img src="/2019/12/14/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E4%BC%A0%E6%99%BA%E7%9A%84Java%E6%95%99%E7%A8%8B.png" alt="传智的Java教程"></p>
+<p>③完成基础的知识学习后，一定要多看看其他白帽黑客的实战思路，对我们的提升是有很大帮助的，知识是死的，而人是活的！</p>
+<h3 id="自我勉励："><a href="#自我勉励：" class="headerlink" title="自我勉励："></a>自我勉励：</h3><p>在学习过程中，尤其是前端学习千万不要放弃，三天两头的进行学习，同时学习的过程中要记录图文并茂的笔试，最重要的是进行实践(遇到暂时花了好久时间都并无法解决的问题开始记录，等一段时间后再看看或者问一下大佬)</p>
+]]></content>
+      <categories>
+        <category>学习规划</category>
+      </categories>
+      <tags>
+        <tag>黑客学习路线</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>抢票神器</title>
     <url>/2019/12/13/%E6%8A%A2%E7%A5%A8%E7%A5%9E%E5%99%A8/</url>
     <content><![CDATA[<h1 id="PC端抢票神器"><a href="#PC端抢票神器" class="headerlink" title="PC端抢票神器"></a>PC端抢票神器</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>github开源项目，神器在手，妈妈再也不用担心俺回不了家了，微信公众号”空谷小莜蓝”获取链接开始抢票之旅吧！<br>另外小编在这希望大家能让更多的朋友关注我们的公众号，这样小编才更有分享的动力呀！</p>
@@ -59,33 +86,6 @@
       </categories>
       <tags>
         <tag>PC端软件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>黑客自学之路</title>
-    <url>/2019/12/11/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/</url>
-    <content><![CDATA[<h1 id="黑客入门学习路线"><a href="#黑客入门学习路线" class="headerlink" title="黑客入门学习路线"></a>黑客入门学习路线</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>感谢博文：<a href="https://blog.csdn.net/csdnsevenn/article/details/78968661" target="_blank" rel="noopener">https://blog.csdn.net/csdnsevenn/article/details/78968661</a><br>我终于知道该如何入门黑客了，之前一直在门前徘徊不知道到底如何去学习，当一名光荣的黑客，保护着我要保护的人，今天我终于知道了自己<br>要干什么，应该干什么，要怎么干，千言万语都在一声”谢谢”中，本篇博客仅仅用来记录我的学习规划，虽然博文中的链接已经失效，作者也没有<br>刻意的加上新的链接，但是那都不是事，有的方向还怕路上没有花花草草吗？</p>
-<a id="more"></a>
-
-<h3 id="第一部分："><a href="#第一部分：" class="headerlink" title="第一部分："></a>第一部分：</h3><p>首先，学习传智的前端课程，简单的入门Web，如下图：</p>
-<p><img src="/2019/12/11/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5.png" alt="第一阶段"></p>
-<p>学完这个之后，在各大漏洞平台或SRC(各大互联网产商的安全部门，负责审核你挖掘的漏洞并提供奖励)平台找一些目标来实际的挖洞一下，挖洞是一定要学会前期的信息收集(踩点)</p>
-<h3 id="第二部分："><a href="#第二部分：" class="headerlink" title="第二部分："></a>第二部分：</h3><p>①百度学习2003,2008的操作系统，需要使用以上操作系统使用网上的已有的CMS(如:discuz,WordPress,phpcms,dedecms等) 搭建一个站点，从在服务器上安装和配置php+apache+mysql等环境开始，不要使用集成工具偷懒，去体会一下网站的搭建过程，知道什么是ftp，什么是空间，在网上买的虚拟主机和服务器，vps是个什么区别？什么是CMS目标站点？</p>
-<p>②接下来是一部门Linux的知识学习了，在线课程：</p>
-<p><a href="http://study.163.com/course/courseMain.htm?courseId=983014" target="_blank" rel="noopener">http://study.163.com/course/courseMain.htm?courseId=983014</a> </p>
-<p>②学习一门方便我们写exploit利用工具的编程工具，首选是Python：</p>
-<p><img src="/2019/12/11/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86.png" alt="第三部分"></p>
-<h3 id="第三部分："><a href="#第三部分：" class="headerlink" title="第三部分："></a>第三部分：</h3><p>①教主的TCP/IP教程：</p>
-<p><img src="/2019/12/11/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E6%95%99%E4%B8%BBTCP.png" alt="教主TCP"><br>②传智的Java教程(着重看Oracle数据库教程)：</p>
-<p><img src="/2019/12/11/%E9%BB%91%E5%AE%A2%E8%87%AA%E5%AD%A6%E4%B9%8B%E8%B7%AF/%E4%BC%A0%E6%99%BA%E7%9A%84Java%E6%95%99%E7%A8%8B.png" alt="传智的Java教程"></p>
-<p>③完成基础的知识学习后，一定要多看看其他白帽黑客的实战思路，对我们的提升是有很大帮助的，知识是死的，而人是活的！</p>
-<h3 id="自我勉励："><a href="#自我勉励：" class="headerlink" title="自我勉励："></a>自我勉励：</h3><p>在学习过程中，尤其是前端学习千万不要放弃，三天两头的进行学习，同时学习的过程中要记录图文并茂的笔试，最重要的是进行实践(遇到暂时花了好久时间都并无法解决的问题开始记录，等一段时间后再看看或者问一下大佬)</p>
-]]></content>
-      <categories>
-        <category>学习规划</category>
-      </categories>
-      <tags>
-        <tag>黑客学习路线</tag>
       </tags>
   </entry>
   <entry>
