@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python基础</title>
+    <url>/2020/01/03/Python%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>#Python基础知识</p>
+<h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>本博客是为了记录Python学习过程中的一些基础知识，主要侧重于可能忘记的或者是易错的一些知识，为了后面的爬虫和数据分析打好基础，<br>本博客是为了记录Python学习过程中的一些基础知识，主要侧重于可能忘记的或者是易错的一些知识，为了后面的爬虫和数据分析打好基础，<br>博客是参照传智博客基础班+就业办详细视频和笔记做出来的，凡是在本博客上的案例都是经过本人验证的，如果后面发现有地方已经行不通，<br>请读者朋友们自行解决或者是关注微信公众号【空谷小莜蓝】后台找到”lures”加我微信，告知我<br>Python是一款对生活非常方便的好学的编程语言，十年内Python仍旧不会淘汰。所以一起来学吧！</p>
+<a id="more"></a>
+
+<h3 id="基本准备："><a href="#基本准备：" class="headerlink" title="基本准备："></a>基本准备：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在系统学习Python之前，先装上一些基本的软件，考虑到这个笔记的侧重点，我就不详细介绍各个软件的安装了！</span></pre></td></tr><tr><td class="code"><pre><span class="line">	1）	Python开发环境及IDE(Pycharm-professional)</span></pre></td></tr><tr><td class="code"><pre><span class="line">	2）	Sublime Text3</span></pre></td></tr><tr><td class="code"><pre><span class="line">	3）	Photoshop</span></pre></td></tr><tr><td class="code"><pre><span class="line">	4）	VMware15及Ubuntu18.04</span></pre></td></tr><tr><td class="code"><pre><span class="line">以上软件的安装可以参考微信公众号【软件安装管家】获取安装包以及安装方法</span></pre></td></tr></table></figure>
+
+
+
+<h3 id="第一节-Linux操作系统基础"><a href="#第一节-Linux操作系统基础" class="headerlink" title="第一节    Linux操作系统基础"></a>第一节    Linux操作系统基础</h3><h5 id="1、Linux以及命令"><a href="#1、Linux以及命令" class="headerlink" title="1、Linux以及命令"></a>1、Linux以及命令</h5><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">操作系统的发展历史：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	Unix：1965年之前的时候，电脑并不像现在这样普遍，它不是一般人能够碰的起的，除非是军事或者是学院的研			究机构，而且当时大型主机至多能提供30台终端(30个键盘、显示器)，连接一台电脑。</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/01/03/Python%E5%9F%BA%E7%A1%80/Unix%E8%AF%9E%E7%94%9F1.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1972年，美国贝尔实验室的Dennis Ritchie在B语言的基础上最终设计出了一种新的语言，他取了BCPL的第二个字母作为这阵语言的名字，这就是C语言</span></pre></td></tr><tr><td class="code"><pre><span class="line">1973年初，C语言的主题完成，Thompson和Ritchie迫不及待地用它重写了现在大名鼎鼎的Unix操作系统</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Minix：因为AT&amp;T(通用电气)的政策改变，在Version 7  Unix推出之后发布新的使用条款，将Unix源代码私有化，在大学中不再能使用Unix源代码，Andrew S.Tanenbaum教授为了能在课堂上教授学生操作系统的实务细节，决定在不使用AT&amp;T的源代码的前提下，自行开发与Unix兼容的操作系统，以避免版权上的争议。他以小型的Unix(mini-Unix)之意，将它称为MINIX。</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux：因为MINIX只是教学使用，因此功能并不强，因此Torvaids利用GNU的bash当做开发环境，gcc当做编译工具，编写了Linux内核-v0.02，但是一开始Linux并不能兼容Unix，即Unix上跑的应用程序不能再Linux上跑，即应用程序与内核之间的接口不一致，因为Unix是遵循POSIX规范的，因此Torvaids修改了Linux，并遵循POSIX(Portable Operating System Interface，他规范了应用程序与内核的接口规范)，一开始Linux只适用于386，后来经过全世界的网友的帮助，最终能兼容多种硬件：</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/01/03/Python%E5%9F%BA%E7%A1%80/%E5%9B%BE%E8%A7%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F1.png" alt></p>
+<p><img src="/2020/01/03/Python%E5%9F%BA%E7%A1%80/%E5%9B%BE%E8%A7%A3%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F2.png" alt></p>
+<ol>
+<li><p><strong>Linux的不同版本以及应用领域</strong></p>
+<ol>
+<li><p>Linux内核及发行版介绍</p>
+<ul>
+<li><p>Linux内核版本：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">	内核(Kernel)是系统的心脏，是运行程序和管理像磁盘和打印机等硬件设备的核心程序，它提供了一个在裸设备与应用程序间的抽象层。</span></pre></td></tr><tr><td class="code"><pre><span class="line">	Linux内核版本又分为稳定版和开发版，两种版本是相互关联，相互循环：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	稳定版：具有工业级强度，可以广泛地应用和部署，新的稳定版相对于较旧的只是修正一些bug或加入一些新的驱动程序</span></pre></td></tr><tr><td class="code"><pre><span class="line">	开发版：由于要试验各种解决方案，所以变化很快</span></pre></td></tr><tr><td class="code"><pre><span class="line">内核源码网址：http:&#x2F;&#x2F;www.kernel.org所有来自全世界的对Linux源码的修改最终都会汇总到这个网站，由Linus领导的开源社区对其进行甄别和修改最终决定是否加入到Linux主线的内核源码中。</span></pre></td></tr></table></figure>
+</li>
+<li><p>Linux发行版本：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux发行版(也被叫作GNU&#x2F;Linux发行版)通常包含了桌面环境、办公软件、媒体播放器、数据库等应用软件</span></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>应用领域：</p>
+<ul>
+<li><p>个人桌面领域的应用：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">此领域是传统Linux应用最薄弱的环节，传统的Linux由于界面简单，操作复杂，应用软件少等缺点，一直被Windows所压制，但近些年来随着Ubuntu，Fedora等优秀的桌面环境兴起，同时大硬件产商对其支持的加大，Linux在个人桌面领域的占用率在逐渐的提高。</span></pre></td></tr><tr><td class="code"><pre><span class="line">典型代表：Ubuntu、Fedora、SUSE Linux</span></pre></td></tr></table></figure>
+</li>
+<li><p>服务器领域：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Linux在服务器领域的应用是其重要分支</span></pre></td></tr><tr><td class="code"><pre><span class="line">Linux免费、稳定、高效等特点在这里的到了很好的体现，但早起因为维护、运行等原因同样受到了很大的限制，但近些年来Linux服务器时长得到了飞速的提升，尤其在一些高端领域尤为广泛。</span></pre></td></tr><tr><td class="code"><pre><span class="line">典型代表：Red Hat公司的AS系列、完全开源的Debian系列、SUSE EnterPrise 11系列等</span></pre></td></tr></table></figure>
+</li>
+<li><p>嵌入式领域</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">近些年来Linux在嵌入式领域的应用的到了飞速的提高</span></pre></td></tr><tr><td class="code"><pre><span class="line">Linux运行稳定、对网络的良好支持性、低成本、且可以根据需要进行软件裁剪、内核最小可以达到几百KB等特点，使其近些年来在嵌入式领域的应用得到非常大的提高</span></pre></td></tr><tr><td class="code"><pre><span class="line">主要应用：机顶盒、数字电视、网络电话、程控交换机、手机、PDA等都是其应用领域，得到了摩托罗拉、三星、NEC、Google等公司的大力推广</span></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>命令的介绍：</p>
+<ol>
+<li>ls命令：</li>
+</ol>
+</li>
+</ol>
+<ol start="2">
+<li><ol start="3">
+<li></li>
+</ol>
+</li>
+</ol>
+<h5 id="2、Linux命令以及Vim编辑器"><a href="#2、Linux命令以及Vim编辑器" class="headerlink" title="2、Linux命令以及Vim编辑器"></a>2、Linux命令以及Vim编辑器</h5>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python基础知识</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>博客表白页的制作</title>
     <url>/2020/01/02/%E5%8D%9A%E5%AE%A2%E8%A1%A8%E7%99%BD%E9%A1%B5%E7%9A%84%E5%88%B6%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="博客添加表白页"><a href="#博客添加表白页" class="headerlink" title="博客添加表白页"></a>博客添加表白页</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>前一段时间在网上hang out的时候发现了一个页面异常的美丽，异常的虐单身狗，我吃了不少狗粮，是可忍，孰不可忍，于是我也来制作一个表白页来浪呀！</p>
