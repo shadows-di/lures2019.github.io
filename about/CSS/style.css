@@ -1,0 +1,23 @@
+table{
+	color: #036;
+	background-image: url(../images/bg2.jpg);
+}
+tr{
+	text-align: left;
+}
+.nav,h3{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+}
+
+body{
+	background-image: url(../images/bg3.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right center;
+}
+p{
+	text-indent: 2em;
+}
