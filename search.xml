@@ -1,6 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>无聊的正月/CSS/style</title>
+    <url>/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/CSS/style/</url>
+    <content><![CDATA[h1{
+	text-align: center;
+	font-weight: 400;
+}
+p{
+	text-indent: 2em;
+}
+div{
+	text-align: center;
+}
+img{
+	width: 800px;
+}
+li{
+	font-weight: 700;
+}
+a{
+	text-decoration: none;
+}]]></content>
+  </entry>
+  <entry>
+    <title>无聊的正月</title>
+    <url>/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/</url>
+    <content><![CDATA[<a id="more"></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>免费翻墙教程(详细)</title>
+    <base target="_blank">
+    <link rel="stylesheet" href="无聊的正月/CSS/style.css">
+</head>
+<body>
+    <h1>2020年能用的免费翻墙方法！</h1>
+    <p>
+        今天，主要介绍几个在youtube上看到的国内用户免费翻墙的方法，小编是在2020年2月2号进行测试，截止到目前为止，这几个方法都是可用的，至于后期如何看作者是否打算继续维护了！
+    </p>
+    <hr>
+    <h3>
+        1、真正的长期免费翻墙方法！无需VPN服务器不要信用卡支付宝，只要你能访问百度就能实现科学上网，电脑手机通用
+        <div>
+            <video width="800" controls="controls" autoplay="autoplay">
+                <source src="无聊的正月/images/func1.mp4" type="video/mp4">第一种方法！
+            </video>
+        </div>
+    </h3>
+    <p>
+        经过测试后发现2020年依旧能用的节点网站有(需翻墙才能打开网址！)
+        <ol>
+            <li>
+                <a href="https://free-ss.site/" target="_blank" rel="noopener">https://free-ss.site/</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/1.png">
+                </div>
+            </li>
+            <li>
+                <a href="https://ssrtool.us/tool/free_ssr" target="_blank" rel="noopener">https://ssrtool.us/tool/free_ssr</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/2.png">
+                </div>
+            </li>
+            <li>
+                <a href="https://xn--90wwvt03e.com//auth/register?affid=435" target="_blank" rel="noopener">发布哥推荐机场（4K不卡）： 邀请码：iloveFBG</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/3.png">
+                </div>
+            </li>
+            <li>
+                <a href="https://github.com/shadowsocks/shadowsocks-windows/releases" target="_blank" rel="noopener">shadowsocks下载地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/4.png">
+                </div>
+            </li>
+            <li>
+                <a href="https://github.com/shadowsocks/shadowsocks-windows" target="_blank" rel="noopener">补丁下载地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/5.png">
+                </div>
+            </li>
+        </ol>
+    </p>
+    <h3>
+        2、长期免费的全平台VPN，亲测2020年可用！
+        <div>
+            <video width="800" controls="controls" autoplay="autoplay">
+                <source src="无聊的正月/images/func2.mp4" type="video/mp4">第二种方法！
+            </video>
+        </div>
+    </h3>
+    <p>
+        经过测试发现不需要翻墙就可以打开官网进行下载！
+        <ol>
+            <li>
+                <a href="https://www.lightyearvpn.xyz/signup?invite_code=waD51c68" target="_blank" rel="noopener">注册地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/7.png" alt>
+                </div>
+            </li>
+            <li>
+                <a href="https://lightyearvpn.club/" target="_blank" rel="noopener">官网地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/8.png" alt>
+                </div>
+            </li>
+            <li>
+                <a href="https://www.lanzous.com/b00t78yfe" target="_blank" rel="noopener">下载地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/9.png" alt>
+                </div>
+            </li>
+            <li>
+                使用折扣码 HAPPYNEWYEAR2020 可获得20%的额外折扣
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/6.png" alt>
+                </div>
+            </li>
+        </ol>
+    </p>
+    <h3>
+        3、长期维护的较便宜的付费VPN(可以通过特殊途径白嫖，看视频了解吧！)，亲测2020年可用！
+        <div>
+            <video width="800" controls="controls" autoplay="autoplay">
+                <source src="无聊的正月/images/func3.mp4" type="video/mp4">第三种方法！
+            </video>
+        </div>
+    </h3>
+    <p>
+        经过测试发现不需要翻墙就可以打开官网进行注册下载！
+        <ol>
+            <li>
+                <a href="https://hi.ssrcf.top/auth/register" target="_blank" rel="noopener">注册地址</a>
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/11.png" alt>
+                </div>
+            </li>
+            <li>
+                随便打开一个youtube视频，惊讶的发现速度真的杠杠的！
+                <div>
+                    <img src="/2020/02/02/%E6%97%A0%E8%81%8A%E7%9A%84%E6%AD%A3%E6%9C%88/images/10.png" alt>
+                </div>
+            </li>
+        </ol>
+    </p>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>]]></content>
+      <tags>
+        <tag>软件神器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>OneDrive 5T免费云空间获取方法</title>
     <url>/2020/01/02/OneDrive-5T%E5%85%8D%E8%B4%B9%E4%BA%91%E7%A9%BA%E9%97%B4%E8%8E%B7%E5%8F%96%E6%96%B9%E6%B3%95/</url>
     <content><![CDATA[<h1 id="OneDrive-5T免费云空间获取方法"><a href="#OneDrive-5T免费云空间获取方法" class="headerlink" title="OneDrive 5T免费云空间获取方法"></a>OneDrive 5T免费云空间获取方法</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">网盘一直是我们需要的一种该工具，生活中资源的分享以及大文件的存取等等都需要它，我们因为它们的存在而更加的方便，国内外有很多网盘，可是很多是收费的，且有些网盘提供的免费的云空间实在是太小了，而且开辟多个账号是很麻烦的一件事，国内的百度网盘深受大家的喜爱，不但注册了就可以拥有2T的免费的云空间，而且资源分享起来很方便，但是呢？百度网盘限速且非会员大文件无法下载或解压，加上网盘对国内的一些&quot;插件&quot;和谐的很厉害，所以基本上你不买会员，就只能是几Kb到十几Kb每秒的归宿下载，这对于我们来说是一件很揪心的事情，所以就有了我们这期的分享！</span></pre></td></tr></table></figure>
