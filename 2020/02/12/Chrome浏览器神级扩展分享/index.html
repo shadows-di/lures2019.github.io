@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('http://yoursite.com').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.6.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":true,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+ <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/b6dbddb6.js","daovoice")
+ daovoice('init', {
+  app_id: "796e3269"
+});
+daovoice('update');
+ </script>
+
+
+
+
+  <meta name="description" content="Chrome浏览器神级扩展分享概述：今天打开youtube时看见一个兄弟在说我的那个管家扩展程序的插件挺好用的，于是我琢磨着分享一起关于这个Chrome浏览器神级插件的文章">
+<meta name="keywords" content="Chrome浏览器神级扩展分享">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chrome浏览器神级扩展分享">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;index.html">
+<meta property="og:site_name" content="空谷小莜蓝">
+<meta property="og:description" content="Chrome浏览器神级扩展分享概述：今天打开youtube时看见一个兄弟在说我的那个管家扩展程序的插件挺好用的，于是我琢磨着分享一起关于这个Chrome浏览器神级插件的文章">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E7%99%BE%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E6%89%A9%E5%B1%95%E7%AE%A1%E7%90%86%E5%99%A8.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;tamperMonkey.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;Infinity%E6%A0%87%E7%AD%BE%E9%A1%B5.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E6%96%B0%E7%89%88%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg">
+<meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E5%A6%B9%E5%AD%90%E5%9B%BE%E7%88%AC%E5%8F%96png.png">
+<meta property="og:updated_time" content="2020-02-12T06:37:57.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;12&#x2F;Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB&#x2F;%E7%99%BE%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8.png">
+
+<link rel="canonical" href="http://yoursite.com/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>Chrome浏览器神级扩展分享 | 空谷小莜蓝</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+	<a href="https://github.com/lures2019" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">空谷小莜蓝</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+        <p class="site-subtitle">开源、分享、生活</p>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-love">
+
+    <a href="/love/" rel="section"><i class="fa fa-fw fa-sitemap"></i>爱情</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="lures">
+      <meta itemprop="description" content="微信公众号"空谷小莜蓝"，分享众多资源！赶紧关注吧！">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="空谷小莜蓝">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Chrome浏览器神级扩展分享
+        </h1>
+
+        <div class="post-meta">
+		
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-12 13:17:16 / 修改时间：14:37:57" itemprop="dateCreated datePublished" datetime="2020-02-12T13:17:16+08:00">2020-02-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%BD%AF%E4%BB%B6%E5%90%88%E9%9B%86/" itemprop="url" rel="index">
+                    <span itemprop="name">软件合集</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/#comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4.4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Chrome浏览器神级扩展分享"><a href="#Chrome浏览器神级扩展分享" class="headerlink" title="Chrome浏览器神级扩展分享"></a>Chrome浏览器神级扩展分享</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><pre><code>今天打开youtube时看见一个兄弟在说我的那个管家扩展程序的插件挺好用的，于是我琢磨着分享一起关于这个Chrome浏览器神级插件的文章</code></pre><a id="more"></a>
+
+<h3 id="1、前提准备："><a href="#1、前提准备：" class="headerlink" title="1、前提准备："></a>1、前提准备：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">1）Cent Brower或者是Chrome浏览器，个人建议是：Cent Browser</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">下载地址：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">	Cent Browser：https:&#x2F;&#x2F;www.centbrowser.cn&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">	Chrome：https:&#x2F;&#x2F;www.chromedownloads.net&#x2F;chrome64win&#x2F;</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/%E7%99%BE%E5%88%86%E6%B5%8F%E8%A7%88%E5%99%A8.png" alt></p>
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">2）电脑联网，下载插件会消耗不少流量(土豪请任性~~~)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">3）博客教程发布地址：https:&#x2F;&#x2F;lures2019.github.io&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">4）微信公众号【空谷小莜蓝】，关注并加入微信讨论群获取更多资源</span></pre></td></tr></table></figure>
+
+<h3 id="2、Chrome神级插件："><a href="#2、Chrome神级插件：" class="headerlink" title="2、Chrome神级插件："></a>2、Chrome神级插件：</h3><blockquote>
+<p>1、Astar</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	这个插件我在我的第一期视频已经详细的介绍了，这里就不在详细的介绍获取的方法，新朋友请看：</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">YouTube：https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v&#x3D;3a9GgkbU1u0&amp;t&#x3D;21s</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">博客教程：					https:&#x2F;&#x2F;lures2019.github.io&#x2F;2020&#x2F;02&#x2F;04&#x2F;Windows%E4%B8%8A%E9%95%BF%E6%9C%9F%E6%9C%89%E6%95%88%E7%9A%84%E5%85%8D%E8%B4%B9%E4%B8%94%E9%AB%98%E9%80%9F%E7%A8%B3%E5%AE%9A%E7%BF%BB%E5%A2%99%E6%B3%95%EF%BC%81&#x2F;#more</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">	这个插件一句话概括就是：翻wall必选！你值得拥有</span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>2、谷歌访问助手</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">虽然，在我们拥有了Astar之后，这个插件似乎变得可有可无了但是有时候我们不想用Astar的时候，我们就可以用谷歌访问助手，小编自己在接触谷歌浏览器后用的第一个插件也就是这个谷歌访问助手，当时因为这个助手的存在，就可以不用百度搜索引擎而用谷歌搜索引擎高兴了一段时间，我认识的第一个外国朋友也是通过Gmail认识的~~~</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">下载链接：http:&#x2F;&#x2F;www.chromestore.cn&#x2F;2018&#x2F;09&#x2F;18&#x2F;%E8%B0%B7%E6%AD%8C%E8%AE%BF%E9%97%AE%E5%8A%A9%E6%89%8B&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">谷歌访问助手因为更新导致不能用时：大家自己在Chrome中文插件网自己搜索安装就好</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">这边也不详细介绍了，因为还是跟前一个一样，之前在博客上已经详细的介绍了，youtube视频链接和博客地址还是第一个，大家按照步骤来就ok了！</span></pre></td></tr></table></figure>
+
+<blockquote>
+<p>3、Extension Manager(扩展管理器)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">Extension Manager扩展管理器是Chrome浏览器中管理插件的很好的一个插件，使用这个插件之后，大家以后调换使用插件对的时就可以不用再打开设置界里面的更多工具进行扩展程序的勾选了！</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">下载地址：https:&#x2F;&#x2F;chrome.google.com&#x2F;webstore&#x2F;detail&#x2F;extension-manager&#x2F;gjldcdngmdknpinoemndlidpcabkggco?utm_source&#x3D;chrome-ntp-icon</span></pre></td></tr></table></figure>
+
+<p><code>注意：下面的扩展程序都是在谷歌应用商店进行安装的，所以我的意思是大家先完成前面的两个操作——安装谷歌访问助手或者是Astar，这样您才能在国内打开谷歌应用商店，然后安装新的插件</code></p>
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/%E6%89%A9%E5%B1%95%E7%AE%A1%E7%90%86%E5%99%A8.png" alt></p>
+<blockquote>
+<p>4、Tamper Monkey(油猴)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">这个怎么形容呢？就是神一般的存在~~~</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">绝对没有夸大其词，因为装上油猴后，无论是找脚本还是自己写脚本然后运行在上面都是上上之选，可能有些朋友不明白脚本是什么意思，我就举个例子吧！像我们之前在腾讯视频、QQ音乐等充会员才能看，才能听得视频或者音乐，我们在油猴上搜索一些脚本就可以将视频进行解析，从而来让我们免费的看，听视频音乐，更多的脚本存在需要你自己去寻找啦~~~</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">下载地址：https:&#x2F;&#x2F;chrome.google.com&#x2F;webstore&#x2F;detail&#x2F;tampermonkey&#x2F;dhdgffkkebhmkfjojejmpbldmpobfkfo?utm_source&#x3D;chrome-ntp-icon</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/tamperMonkey.png" alt></p>
+<blockquote>
+<p>5、Infinity 新标签页 </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">大家也看了我的几期视频了，知道我的那个浏览器页面的布局很好看，我就是用了这个插件，不但可以在主页设置一下自己经常访问的一些网站，也可以定期的更换页面的背景，愉快的办公从打开浏览器的页面开始~~~</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">下载链接：https:&#x2F;&#x2F;chrome.google.com&#x2F;webstore&#x2F;search&#x2F;infinity%E6%A0%87%E7%AD%BE%E9%A1%B5?utm_source&#x3D;chrome-ntp-icon</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/Infinity%E6%A0%87%E7%AD%BE%E9%A1%B5.png" alt></p>
+<blockquote>
+<p>6、鼠标点击特效</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">	这个就是咱们中国人自己写的一个插件，意思是鼠标在浏览器页面进行点击的时候会显示各种各样的颜文字~~~</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">下载链接：https:&#x2F;&#x2F;chrome.google.com&#x2F;webstore&#x2F;search&#x2F;%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88?utm_source&#x3D;chrome-ntp-icon</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/%E9%BC%A0%E6%A0%87%E7%82%B9%E5%87%BB%E7%89%B9%E6%95%88.png" alt></p>
+<h3 id="3、最后："><a href="#3、最后：" class="headerlink" title="3、最后："></a>3、最后：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">这几个就是我认为比较好的谷歌浏览器插件，当然你需要什么类型的插件，自己在谷歌应用商店寻找就好，一般评分比较高的值的信赖，像前段开发师或者是后端，全栈的一些大佬可以用json格式化插件，咱们写文章的时候可以用Markdown here等等</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">最后放一下，微信公众号二维码，欢迎大家关注和进群讨论！</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/%E6%96%B0%E7%89%88%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.jpg" alt></p>
+<h3 id="4、Python爬虫爬取大量妹子图："><a href="#4、Python爬虫爬取大量妹子图：" class="headerlink" title="4、Python爬虫爬取大量妹子图："></a>4、Python爬虫爬取大量妹子图：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">工具：pycharm或者其他python编译器</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/12/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/%E5%A6%B9%E5%AD%90%E5%9B%BE%E7%88%AC%E5%8F%96png.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">用os模块，requests,re来爬取妹子图片</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">url网址：http:&#x2F;&#x2F;www.zdqx.com&#x2F;qingchun&#x2F;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">import requests</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">import re,os,time</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">headers &#x3D; &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    &#39;user-agent&#39;: &#39;Mozilla&#x2F;5.0 (Windows NT 10.0; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;78.0.3904.108 Safari&#x2F;537.36&#39;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &#39;referer&#39;: &#39;http:&#x2F;&#x2F;www.zdqx.com&#x2F;pcbz&#x2F;70270.html&#39;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">    &#39;cookie&#39;: &#39;Hm_lvt_303a32038183efa6d8efec90c0031b87&#x3D;1581472898; Hm_lpvt_303a32038183efa6d8efec90c0031b87&#x3D;1581472912&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">def get_urls(url):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    response &#x3D; requests.get(url&#x3D;url, headers&#x3D;headers)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">    response.encoding &#x3D; response.apparent_encoding</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    result1 &#x3D; re.findall(&#39;&lt;div class&#x3D;&quot;listbox&quot;&gt;(.*?)&lt;&#x2F;div&gt;&#39;, response.text, re.S)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    result2 &#x3D; re.findall(&#39;&lt;img src&#x3D;&quot;(.*?)&quot; alt&#x3D;&quot;(.*?)&quot;&gt;&#39;, str(result1), re.S)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    for url, title in result2:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">        url &#x3D; &#39;http:&#39; + str(url)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">21</span></pre></td><td class="code"><pre><span class="line">        title &#x3D; title.replace(r&#39;&quot; height&#x3D;&quot;281&#39;, &#39;&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">22</span></pre></td><td class="code"><pre><span class="line">        savedata(url, title)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">23</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">24</span></pre></td><td class="code"><pre><span class="line">def savedata(url,title):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">25</span></pre></td><td class="code"><pre><span class="line">    path &#x3D; &#39;小姐姐图片&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">26</span></pre></td><td class="code"><pre><span class="line">    if not os.path.exists(path):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">27</span></pre></td><td class="code"><pre><span class="line">        os.mkdir(path)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">28</span></pre></td><td class="code"><pre><span class="line">    response &#x3D; requests.get(url,headers&#x3D;headers)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">29</span></pre></td><td class="code"><pre><span class="line">    response.encoding &#x3D; response.apparent_encoding</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">30</span></pre></td><td class="code"><pre><span class="line">    with open(path + &#39;&#x2F;&#39; + title + &#39;.jpg&#39;,mode&#x3D;&quot;wb&quot;) as f:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">31</span></pre></td><td class="code"><pre><span class="line">        f.write(response.content)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">32</span></pre></td><td class="code"><pre><span class="line">    print(title+&#39;保存成功！&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">33</span></pre></td><td class="code"><pre><span class="line">    f.close()</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">34</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">35</span></pre></td><td class="code"><pre><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">36</span></pre></td><td class="code"><pre><span class="line">    for page in range(2,41):</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">37</span></pre></td><td class="code"><pre><span class="line">        if page &#x3D;&#x3D; 1:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">38</span></pre></td><td class="code"><pre><span class="line">            url &#x3D; &#39;http:&#x2F;&#x2F;www.zdqx.com&#x2F;qingchun&#x2F;index.html&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">39</span></pre></td><td class="code"><pre><span class="line">        else:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">40</span></pre></td><td class="code"><pre><span class="line">            url &#x3D;&#39;http:&#x2F;&#x2F;www.zdqx.com&#x2F;qingchun&#x2F;index_&#39; + str(page) + &#39;.html&#39;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">41</span></pre></td><td class="code"><pre><span class="line">        get_urls(url)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">42</span></pre></td><td class="code"><pre><span class="line">        print(&#39;第&#39;+str(page-1)+&#39;采集完毕！&#39;)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">43</span></pre></td><td class="code"><pre><span class="line">        time.sleep(2)</span></pre></td></tr></table></figure>
+
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>如果您觉得有帮助的话，请我喝杯奶茶就好！</div>
+  <button disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="lures 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="lures 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E7%A5%9E%E7%BA%A7%E6%89%A9%E5%B1%95%E5%88%86%E4%BA%AB/" rel="tag"># Chrome浏览器神级扩展分享</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/11/2020%E5%B9%B4Android%E9%AB%98%E9%80%9F%E7%A8%B3%E5%AE%9A%E7%BF%BB%E5%A2%99%E6%96%B9%E6%B3%95/" rel="prev" title="2020年Android高速稳定翻墙方法">
+      <i class="fa fa-chevron-left"></i> 2020年Android高速稳定翻墙方法
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chrome浏览器神级扩展分享"><span class="nav-number">1.</span> <span class="nav-text">Chrome浏览器神级扩展分享</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述："><span class="nav-number">1.0.1.</span> <span class="nav-text">概述：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1、前提准备："><span class="nav-number">1.0.2.</span> <span class="nav-text">1、前提准备：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、Chrome神级插件："><span class="nav-number">1.0.3.</span> <span class="nav-text">2、Chrome神级插件：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、最后："><span class="nav-number">1.0.4.</span> <span class="nav-text">3、最后：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、Python爬虫爬取大量妹子图："><span class="nav-number">1.0.5.</span> <span class="nav-text">4、Python爬虫爬取大量妹子图：</span></a></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lures"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">lures</p>
+  <div class="site-description" itemprop="description">微信公众号"空谷小莜蓝"，分享众多资源！赶紧关注吧！</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lures2019" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lures2019" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zhichaowang94@gmail.com" title="E-Mail → mailto:zhichaowang94@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/zhichaowang94/home?wvr=5" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;zhichaowang94&#x2F;home?wvr&#x3D;5" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/12209371/%E7%8E%8B%E6%99%BA%E8%B6%85" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;12209371&#x2F;王智超" rel="noopener" target="_blank"><i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title">
+      <i class="fa fa-fw fa-link"></i>
+      友链
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://1084350607.github.io/" title="https:&#x2F;&#x2F;1084350607.github.io&#x2F;" rel="noopener" target="_blank">Tsy</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://wangzhichao2019.github.io/" title="https:&#x2F;&#x2F;wangzhichao2019.github.io&#x2F;" rel="noopener" target="_blank">孤独的国</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lures</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">34k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">31 分钟</span>
+</div>
+
+<!--
+	<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.0.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.6.0
+  </div>
+-->
+  <div class="addthis_inline_share_toolbox">
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dedf84693913247" async="async"></script>
+  </div>
+
+<div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span id="busuanzi_container_site_uv">
+    本站总访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+  </span>
+  <span id="busuanzi_container_site_pv">
+      &nbsp;本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  </div>
+  </div>
+ <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("12/08/2019 16:00:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(() => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el: '#comments',
+      verify: false,
+      notify: false,
+      appId: 'Y0uW79uxhci3bztAFrDPdMYy-gzGzoHsz',
+      appKey: 'BurlVFs6pDeyv6fgfKLJmLbr',
+      placeholder: "",
+      avatar: '/images/avatar.png',
+      meta: guest,
+      pageSize: '10' || 10,
+      visitor: false,
+      lang: '' || 'zh-cn',
+      path: location.pathname,
+      recordIP: false,
+      serverURLs: ''
+    });
+  }, window.Valine);
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<!-- ҳ����С���� -->
+<script type="text/javascript" src="/js/love.js"></script>
+<!-- ѩ����Ч -->
+<script type="text/javascript" src="\js\snow.js"></script>
+</html>
+
