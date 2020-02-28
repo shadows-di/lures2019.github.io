@@ -1,6 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>使用Gitbook打造免费个人电子书!</title>
+    <url>/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/</url>
+    <content><![CDATA[<h1 id="使用Gitbook打造免费个人电子书"><a href="#使用Gitbook打造免费个人电子书" class="headerlink" title="使用Gitbook打造免费个人电子书!"></a>使用Gitbook打造免费个人电子书!</h1><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>本文详细的介绍了lures第一次白嫖网上搭建电子书的详细过程，有兴趣的朋友们可以进去看看~~</p>
+<a id="more"></a>
+
+<h3 id="1、安装Node-js"><a href="#1、安装Node-js" class="headerlink" title="1、安装Node.js"></a>1、安装Node.js</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">官网地址：https:&#x2F;&#x2F;nodejs.org&#x2F;en&#x2F;</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/1_Node.js%E5%AE%89%E8%A3%85.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">具体的安装过程就不再介绍，纯属傻瓜式安装步骤~~~</span></pre></td></tr><tr><td class="code"><pre><span class="line">但是下面这步要注意，放到自己想放的盘，建议和Node.js在同一个盘！(当然这时候Node.js安装包可以删掉了，毕竟只是一个镜像文件~emoji)</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/2_%E6%9B%B4%E6%94%B9%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/3_Node.js%E5%AE%89%E8%A3%85%E5%AE%8C%E6%AF%95.png" alt></p>
+<h3 id="2、安装Gitbook！"><a href="#2、安装Gitbook！" class="headerlink" title="2、安装Gitbook！"></a>2、安装Gitbook！</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[windows+R]快捷键调出窗口，并输入cmd打开命令符界面，接着按下[enter]回车，如下图</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/4_%E6%89%93%E5%BC%80cmd%E7%AA%97%E5%8F%A3.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在命令行输入下面的代码：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	npm install gitbook-cli -g</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/5_npm%E5%91%BD%E4%BB%A4.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">因为，我之前安装过了Node.js,所以Gitbook安装完是这个界面！文件夹略微有所不同(我之前搭建github博客也是这个文件夹~)</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/6_Gitbook%E5%AE%89%E8%A3%85.png" alt></p>
+<h3 id="3、Gitbook的基本使用！"><a href="#3、Gitbook的基本使用！" class="headerlink" title="3、Gitbook的基本使用！"></a>3、Gitbook的基本使用！</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">为了演示操作，我准备将第一本电子书存放到这个路径：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	E:\lures2020_workplace\lures2020-demos\2020_2_28Gitbook打造个人电子书</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">1)初始化书籍目录：gitbook init</span></pre></td></tr><tr><td class="code"><pre><span class="line">	(README.md 和 SUMMARY.md 是两个必须文件, README.md 是对书籍的简单介绍, SUMMARY.md 是书籍的目录结构)</span></pre></td></tr><tr><td class="code"><pre><span class="line">	</span></pre></td></tr><tr><td class="code"><pre><span class="line">2)编译和预览书籍：gitbook serve</span></pre></td></tr><tr><td class="code"><pre><span class="line">	(注意: gitbook serve 命令实际上会首先调用 gitbook build 编译书籍，完成以后会打开一个 web 服务器，监听在本地的 4000 端口)</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E7%94%B5%E5%AD%90%E4%B9%A6%E5%AD%98%E6%94%BE%E8%B7%AF%E5%BE%84.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">现在需要使用windows窗口命令进入到我们创建的目录下面：(以我的文件夹目录为例！)</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/gitbook%E5%88%9D%E5%A7%8B%E5%8C%961.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/gitbook%E5%88%9D%E5%A7%8B%E5%8C%962.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/gitbook%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%A4%E5%BF%85%E9%9C%80%E6%96%87%E4%BB%B6.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下面启动本地服务，查看书籍状况：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	gitbook serve</span></pre></td></tr><tr><td class="code"><pre><span class="line">复制：http:&#x2F;&#x2F;localhost:4000到浏览器查看状态</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/serve%E5%88%9D%E5%A7%8B%E7%8A%B6%E6%80%81.png" alt></p>
+<h3 id="4、简单书写！"><a href="#4、简单书写！" class="headerlink" title="4、简单书写！"></a>4、简单书写！</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Gitbook是一个开源软件，支持Markdown语法来编排书本，同时也支持HTML语法！</span></pre></td></tr><tr><td class="code"><pre><span class="line">下面，我们使用sublime编译器来书写一下电子书！</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/sublime%E7%BC%96%E8%AF%91%E5%99%A8.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在SMMARY.md中将[Introduction]替换成[本书介绍]，接着[Ctrl+S]进行保存，然后gitbook serve查看现在的状态如何~~</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/Introduction%E6%9B%BF%E6%8D%A2.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E7%AE%80%E5%8D%95%E4%B9%A6%E5%86%991.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注意：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	Summary代表的是电子书的目录部分，每一行的那个格式代表一个目录，要是想要在该目录下添加子目录，可以像下面格式一样：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	* [根目录](part.md)</span></pre></td></tr><tr><td class="code"><pre><span class="line">	-- * [子目录](part1.md)</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E4%BB%8B%E7%BB%8D%E9%83%A8%E5%88%861.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">至于目录里面的文章以及介绍部分的书写大家可以先熟悉一下Markdown和HTML的语法！</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA.png" alt></p>
+<h3 id="5、相关插件！"><a href="#5、相关插件！" class="headerlink" title="5、相关插件！"></a>5、相关插件！</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">gitbook支持许多插件，用户可以在下面的官网进行搜索gitbook相关的插件！</span></pre></td></tr><tr><td class="code"><pre><span class="line">	https:&#x2F;&#x2F;www.npmjs.com&#x2F;</span></pre></td></tr><tr><td class="code"><pre><span class="line">gitbook 的插件信息会保存在 book.json 文件里</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">以下是我个人常用的插件:</span></pre></td></tr><tr><td class="code"><pre><span class="line">gitbook-plugin-donate(打赏按钮): https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;gitbook-plugin-donate</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">gitbook-plugin-github-buttons(GitHub按钮): https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;gitbook-plugin-github-buttons</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">gitbook-plugin-edit-link(GitHub编辑按钮): https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;gitbook-plugin-edit-link</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/gitbook%E6%8F%92%E4%BB%B61.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">插件的安装：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	1)需要新建一个文件：book.json</span></pre></td></tr><tr><td class="code"><pre><span class="line">	2)复制需要的代码，这里以&quot;打赏&quot;按钮为例进行说明！</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/book_json%E6%8F%92%E4%BB%B6%E6%96%87%E4%BB%B6.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E4%BF%AE%E6%94%B9%E6%8F%92%E4%BB%B6%E4%BB%A3%E7%A0%81.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;title&quot;: &quot;使用Gitbook打造免费的个人电子书&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;description&quot;: &quot;lures手把手完整式教程！&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;author&quot;: &quot;lures&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;language&quot;: &quot;zh-hans&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;root&quot;: &quot;.&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;plugins&quot;: [</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;donate&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;github-buttons@2.1.0&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;edit-link&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    ],</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">    &quot;pluginsConfig&quot;: &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;donate&quot;: &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;wechat&quot;: &quot;https:&#x2F;&#x2F;lures2019.github.io&#x2F;images&#x2F;wechatpay.png&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;alipay&quot;: &quot;https:&#x2F;&#x2F;lures2019.github.io&#x2F;images&#x2F;alipay.png&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;title&quot;: &quot;&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;button&quot;: &quot;打赏&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;alipayText&quot;: &quot;支付宝打赏&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;wechatText&quot;: &quot;微信打赏&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;github-buttons&quot;: &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;repo&quot;: &quot;lures2019&#x2F;lures2020-demos&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;types&quot;: [</span></pre></td></tr><tr><td class="code"><pre><span class="line">                &quot;star&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            ],</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;size&quot;: &quot;small&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &quot;edit-link&quot;: &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;base&quot;: &quot;https:&#x2F;&#x2F;github.com&#x2F;lures2019&#x2F;lures2020-demos&#x2F;2020_2_28Gitbook打造个人电子书&quot;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">            &quot;label&quot;: &quot;Edit This Page&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注意：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	上面都是我自己的图片地址以及GitHub仓库的名字，你们需要自己替换~~~</span></pre></td></tr><tr><td class="code"><pre><span class="line">	另外，在gitbook serve之前，需要先gitbook install，否则报错，如下图：</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/5_gitbook%E6%8F%92%E4%BB%B6install.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/5_%E6%8F%92%E4%BB%B6%E5%AE%8C%E6%AF%95%EF%BC%81.png" alt></p>
+<h3 id="6、将Gitbook电子书部署到GitHub上！"><a href="#6、将Gitbook电子书部署到GitHub上！" class="headerlink" title="6、将Gitbook电子书部署到GitHub上！"></a>6、将Gitbook电子书部署到GitHub上！</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">下载Git软件: https:&#x2F;&#x2F;git-scm.com&#x2F;downloads</span></pre></td></tr><tr><td class="code"><pre><span class="line">(具体使用教程参考我的公众号文章：https:&#x2F;&#x2F;mp.weixin.qq.com&#x2F;s?__biz&#x3D;MzU5OTkzNDMyMQ&#x3D;&#x3D;&amp;mid&#x3D;2247484320&amp;idx&#x3D;1&amp;sn&#x3D;9b456e9e563a03e1adbea6256cd89224&amp;chksm&#x3D;feac17bec9db9ea8eb50a38eee3cdebaf7789148736c7871fdd2b5ba58207d790d2b0d8fe950&amp;token&#x3D;1673133867&amp;lang&#x3D;zh_CN#rd)</span></pre></td></tr><tr><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="code"><pre><span class="line">master 分支保存书籍的源码</span></pre></td></tr><tr><td class="code"><pre><span class="line">gh-pages 分支保存书籍编译后的 HTML 文件</span></pre></td></tr><tr><td class="code"><pre><span class="line">	git checkout -b gh-pages</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">注册和登录Github的过程我就不详细叙述了！大家可以参考这篇文章：</span></pre></td></tr><tr><td class="code"><pre><span class="line">	https:&#x2F;&#x2F;blog.csdn.net&#x2F;rj597306518&#x2F;article&#x2F;details&#x2F;71307757</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E7%99%BB%E5%BD%95gitbook.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">新建一个仓库：lures2020-gitbooks</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/git%E6%96%B0%E4%BB%93%E5%BA%93.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">复制仓库的ssh地址，打开想克隆仓库的位置Git bash，接着输入下面的代码：</span></pre></td></tr><tr><td class="code"><pre><span class="line">git clone git@github.com:lures2019&#x2F;lures2020-gitbooks.git</span></pre></td></tr><tr><td class="code"><pre><span class="line">cd lures2020-gitbooks</span></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接着，将_book文件夹里面的文件全部拷贝到新的文件夹里，如下图：</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/_book%E6%96%87%E4%BB%B6%E5%A4%B9%E6%93%8D%E4%BD%9C1.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">接着，便可以输入下面这些命令：</span></pre></td></tr><tr><td class="code"><pre><span class="line">git add .</span></pre></td></tr><tr><td class="code"><pre><span class="line">git commit -m &quot;lures2020年上传到github上的第一本电子书&quot;</span></pre></td></tr><tr><td class="code"><pre><span class="line">git push -u origin master</span></pre></td></tr></table></figure>
+
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E5%88%A0%E9%99%A4%E5%8E%9F%E6%9C%89%E5%88%86%E6%94%AF.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/gitbooks%E4%BB%A3%E7%A0%81%E4%B8%8A%E4%BC%A01.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E9%80%89%E6%8B%A9settings%E7%95%8C%E9%9D%A2.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/settings2.png" alt></p>
+<p><img src="/2020/02/28/Gitbook%E6%89%93%E9%80%A0%E4%B8%AA%E4%BA%BA%E7%94%B5%E5%AD%90%E4%B9%A6/%E4%B9%A6%E6%9C%AC%E5%B1%95%E7%A4%BA.png" alt></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">最后，经过好久的测试，终于over，顺便记录下教程，感谢我就打赏一下吧！</span></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>使用Gitbook打造免费个人电子书!</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>国内免翻墙使用国际版Tiktok及讯雷暴力破解试用</title>
     <url>/2020/02/18/%E5%9B%BD%E5%86%85%E5%85%8D%E7%BF%BB%E5%A2%99%E4%BD%BF%E7%94%A8%E5%9B%BD%E9%99%85%E7%89%88Tiktok%E5%8F%8A%E8%AE%AF%E9%9B%B7%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3%E8%AF%95%E7%94%A8/</url>
     <content><![CDATA[<h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>之前就在youtube上看到大家说推荐免插卡的国际版Tiktok以及迅雷暴力破解不限速两款软件，很抱歉10多天了我才发一期这样的教程，但是经过我的测试，这两个目前是能用的，至于能用多久<br>这个就不是我能说的了，所以哪天要是这个和谐了。。。</p>
